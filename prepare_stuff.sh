@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #/bin/bash
 set -x
+mkdir -p /home/ubuntu/wp-"$DEPLOYMENT_GROUP_NAME"-files
 chown -R www-data.www-data /home/ubuntu/wp-"$DEPLOYMENT_GROUP_NAME"-files/plugins
 chown -R www-data.www-data /home/ubuntu/wp-"$DEPLOYMENT_GROUP_NAME"-files/uploads
-mkdir -p /home/ubuntu/wp-"$DEPLOYMENT_GROUP_NAME"-files
 [ -z "$WORDPRESS_DB_PASSWORD" ] && echo "Need to set WORDPRESS_DB_PASSWORD" && exit 1;
 [ -z "$WORDPRESS_DB_HOST" ] && echo "Need to set WORDPRESS_DB_HOST" && exit 1;
 [ -z "$WORDPRESS_DB_USER" ] && echo "Need to set WORDPRESS_DB_USER" && exit 1;

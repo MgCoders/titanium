@@ -12,6 +12,10 @@ permissions:
    group: ubuntu
 
 hooks:
+  BeforeInstall:
+    - location: prepare_stuff.sh
+      timeout: 300
+      runas: root
   AfterInstall:
     - location: stop_server.sh
       timeout: 300

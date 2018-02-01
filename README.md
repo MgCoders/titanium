@@ -4,15 +4,20 @@ This website was developed with Wordpress
 
 Wordpress en contenedor Docker detrás de Nginx+LetsEncrypt
 ----------------------------------------------------------
-### Sitio
+### Sitio Pipeline
 
-Cada sitio debe configurar su virtual host en el docker-compose.yml y datos para el certificado LetsEncrypt en variables de entorno y el contenedor Nginx descubre el puerto interno al levantarlo. Para cada sitio nuevo, hay que configurar un subdominio en AWS que será el virtual host.
+En appsec.yml se debe configurar la carpeta destino en el servidor.
+El nombre debe ser wp-$DEPLOYMENT_GROUP_NAME-deploy, siendo $DEPLOYMENT_GROUP_NAME el nombre del deployment group a configurar en la aplicación de CodeDeploy.
+Debe existir asimismo en el servidor un archivo llamado "$DEPLOYMENT_GROUP_NAME".env con las variables de entorno necesarias para la ejcución del compose a saber: 
 
-En env del docker-compose.yml
-
-    VIRTUAL_HOST: silicon.mgcoders.com
-    LETSENCRYPT_HOST: silicon.mgcoders.com
-    LETSENCRYPT_EMAIL: info@mgcoders.com
+*WORDPRESS_DB_PASSWORD
+*WORDPRESS_DB_HOST
+*WORDPRESS_DB_USER
+*WORDPRESS_DB_NAME
+*VIRTUAL_HOST
+*LETSENCRYPT_HOST
+*LETSENCRYPT_EMAIL
+*DEPLOYMENT_GROUP_NAME
 
 ### Servidor
 

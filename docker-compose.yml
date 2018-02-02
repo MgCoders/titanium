@@ -15,9 +15,8 @@ services:
       LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
     volumes:
+      - ../wp-${DEPLOYMENT_GROUP_NAME}-files/wp-content:/var/www/html/wp-content
       - ./themes:/var/www/html/wp-content/themes
-      - ../wp-${DEPLOYMENT_GROUP_NAME}-files/plugins:/var/www/html/wp-content/plugins
-      - ../wp-${DEPLOYMENT_GROUP_NAME}-files/uploads:/var/www/html/wp-content/uploads
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
 networks:

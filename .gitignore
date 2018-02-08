@@ -20,6 +20,5 @@ wp-content/plugins/hello.php
 .idea
 
 # Mg
-uploads/
-plugins/
+wp-content/
 themes/tw*

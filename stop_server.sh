@@ -2,7 +2,7 @@
 #/bin/bash
 set -x
 cd /home/ubuntu/wp-REPLACE_PROJECT_NAME-deploy
-docker-compose kill
+docker-compose -f docker-compose.testing.yml kill
 if [ $? -eq 0 ]
 then
   echo "Successfull"

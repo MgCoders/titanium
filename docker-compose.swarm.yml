@@ -18,7 +18,7 @@ services:
       labels:
         - "traefik.port=80"
         - "traefik.backend=blog"
-        - "traefik.frontend.rule=PathPrefix:/"
+        - "traefik.frontend.rule=Host:${VIRTUAL_HOST}"
       restart_policy:
         condition: on-failure
 

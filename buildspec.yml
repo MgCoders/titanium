@@ -12,10 +12,11 @@ phases:
         - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
         - export IMAGE_TAG=$(xmllint --xpath "//*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
         - export PROJECT_NAME=$(xmllint --xpath "//*[local-name()='project']/*[local-name()='artifactId']/text()" pom.xml)
-        - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' stop_server.sh
-        - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' start_server.sh
-        - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' check_service.sh
-        - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' prepare_stuff.sh
+        - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" stop_server.sh
+        - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" start_server.sh
+        - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" check_service.sh
+        - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" prepare_stuff.sh
+        - cat start_server.sh
     build:
       commands:
         - echo Build started on `date` for $PROJECT_NAME version $IMAGE_TAG
@@ -33,5 +34,7 @@ artifacts:
     - 'stop_server.sh'
     - 'start_server.sh'
     - 'check_service.sh'
+    - 'prepare_stuff.sh'
     - 'appspec.yml'
     - 'docker-compose.testing.yml'
+    - 'docker-compose.swarm.yml'

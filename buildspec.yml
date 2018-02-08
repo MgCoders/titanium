@@ -15,6 +15,7 @@ phases:
         - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' stop_server.sh
         - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' start_server.sh
         - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' check_service.sh
+        - sed -i 's/REPLACE_PROJECT_NAME/$PROJECT_NAME/g' prepare_stuff.sh
     build:
       commands:
         - echo Build started on `date` for $PROJECT_NAME version $IMAGE_TAG

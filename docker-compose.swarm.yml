@@ -3,7 +3,7 @@ version: '3.3'
 services:
 
   blog:
-    image: mgcoders/calcium
+    image: REPLACE_IMAGE_NAME
     networks:
       - traefik-net
     environment:

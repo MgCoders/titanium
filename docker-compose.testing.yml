@@ -15,10 +15,10 @@ services:
       LETSENCRYPT_HOST: ${LETSENCRYPT_HOST}
       LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
     volumes:
-      - REPLACE_IMAGE_NAME-data:/var/www/html/wp-content
+      - REPLACE_PROJECT_NAME-data:/var/www/html/wp-content
 
 volumes:
-  REPLACE_IMAGE_NAME-data:
+  REPLACE_PROJECT_NAME-data:
 
 networks:
   default:

@@ -17,6 +17,7 @@ phases:
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" check_service.sh
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" prepare_stuff.sh
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" appspec.yml
+        - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" docker-compose.testing.yml
         - export IMAGE_NAME=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$PROJECT_NAME:$IMAGE_TAG
         - sed -i "s#REPLACE_IMAGE_NAME#$IMAGE_NAME#g" docker-compose.swarm.yml
         - sed -i "s#REPLACE_IMAGE_NAME#$IMAGE_NAME#g" docker-compose.testing.yml

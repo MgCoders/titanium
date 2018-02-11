@@ -1,6 +1,7 @@
 <project>
     <artifactId>titanium</artifactId>
-    <version>0.1</version>
-    <version>titanium.magnesium.link</version>
+    <version>1.0</version>
+    <urlTest>titanium.magnesium.coop</urlTest>
+    <urlProd>titanium.magnesium.link</urlProd>
 </project>
 

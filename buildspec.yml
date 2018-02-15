@@ -18,7 +18,6 @@ phases:
         - export PROJECT_URL_PROD=$(xmllint --xpath "//*[local-name()='project']/*[local-name()='urlProd']/text()" pom.xml)
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" stop_server.sh
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" start_server.sh
-        - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" check_service.sh
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" appspec.yml
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" docker-compose.testing.yml
         - sed -i "s/REPLACE_PROJECT_NAME/$PROJECT_NAME/g" docker-compose.swarm.yml
@@ -43,8 +42,6 @@ artifacts:
   files:
     - 'stop_server.sh'
     - 'start_server.sh'
-    - 'check_service.sh'
-    - 'prepare_stuff.sh'
     - 'appspec.yml'
     - 'docker-compose.testing.yml'
     - 'docker-compose.swarm.yml'

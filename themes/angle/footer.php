@@ -51,7 +51,7 @@ if ( $widgets_areas > 0 ) {
                     <?php echo get_theme_mod( 'footer-text', angle_get_default( 'footer-text' ) ); ?>
                 </p>
                 <p class="designed-by">
-                    <?php printf( __( 'Designed by %s', 'wpzoom' ), '<a href="http://www.wpzoom.com/" target="_blank" rel="designer">WPZOOM</a>' ); ?>
+                    <?php printf( __( 'Designed by %s', 'wpzoom' ), '<a href="http://www.magnesium.coop/" target="_blank" rel="designer">WPZOOM</a>' ); ?>
                 </p>
             </div>
             <div class="clear"></div>

@@ -1,0 +1,43 @@
+baseurl = "https://www.example.com/"
+languageCode = "en"
+title = "Calmo.uy"
+theme = "vex-hugo"
+
+[params]
+  description = "CALMO es un proyecto de aceite de cáñamo industrial rico en CBD de GerminarUy SRL. El proyecto es desarrollado con capital semilla de la Agencia Nacional de Investigación e Innovación (ANII) a través de su programa Emprendedores Innovadores. La empresa se encuentra incubada en Khem, la incubadora de empresas de base tecnológica del Instituto Polo Tecnológico de Pando. Khem es la institución patrocinadora ante ANII y ha brindado apoyo, tutoría y asesoramiento en todas las etapas de desarrollo del proyecto. Sitio en construcción."
+
+  # Put your custom stylesheets and scripts
+  custom_stylesheets = []
+  custom_scripts = []
+
+  # Additional meta
+  [[params.meta]]
+    name = ""
+    description = ""
+
+  # Navigation bar informations
+ # [params.navbar]
+ #   logo = "Calmo.uy"
+ #   [[params.navbar.menu]]
+ #     link = "#"
+ #     text = "INICIO"
+ #   [[params.navbar.menu]]
+ #     link = "#about"
+ #     text = "NOSOTROS"
+ #   [[params.navbar.menu]]
+ #     link = "#contact"
+ #     text = "CONTACTO"
+
+  # Header
+  [params.header]
+    title = "Aceite de cannabis"
+    text = "CALMO es un proyecto de aceite de cáñamo industrial rico en CBD de GerminarUy SRL. El proyecto es desarrollado con capital semilla de la Agencia Nacional de Investigación e Innovación (ANII) a través de su programa Emprendedores Innovadores. La empresa se encuentra incubada en Khem, la incubadora de empresas de base tecnológica del Instituto Polo Tecnológico de Pando. Khem es la institución patrocinadora ante ANII y ha brindado apoyo, tutoría y asesoramiento en todas las etapas de desarrollo del proyecto. Sitio en construcción."
+    [params.header.image]
+      path = "images/calmo01.png"
+      alt = "Watch"
+    [params.header.button]
+      link = "mailto:germinaruy@gmail.com"
+      text = "Más información"
+
+
+  # Footer uses navbar data
